@@ -1,6 +1,6 @@
 <h1 align="center"> RPI Pico Playground </h1>
 
-Messing around with the pico
+Messing around with the RPI pico.
 
 ## <b> Installing Micropython on the Pi Pico </b>
 ### Drag and Drop Micropython
@@ -24,9 +24,10 @@ Open the serial port as:
 ```bash
 $ picocom /dev/ttyACM0
 ```
+Quit the program with `C-a-q`(Ctrl+a+q) assuming that `C-a` is the escape character.
 
 ## <b>Ampy</b>
- Utility to interact with a CircuitPython or MicroPython board over a serial connection.
+Utility to interact with a CircuitPython or MicroPython board over a serial connection.
 
 ### Installation
 ```bash
@@ -62,6 +63,73 @@ Put this `.ampy` file to your project's directory and you can now run `ampy` wit
 $ ampy run main.py
 ```
 
+### Example usage
+1. Create the `hello_world.py` file and add whatever:
+```python
+while 1:
+    print("Hello world!")
+```
+2. Put the file on the RPI Pico
+We put our `hello_world.py` file to the board as `main.py` so that it autoruns. Think of `main.py` as the `entrypoint module` run by the Pico on reset/reboot:
+```bash
+$ ampy put hello_world.py main.py
+```
+3. List the files on the pico
+```bash
+$ ampy ls
+/main.py
+```
+4. Open up the boards serial port and do a soft reset/reboot with `C-d`(Ctrl+d) and the code will autorun!:
+```
+$ picocom /dev/ttyACM0
+picocom v2.2
+
+port is        : /dev/ttyACM0
+flowcontrol    : none
+baudrate is    : 9600
+parity is      : none
+databits are   : 8
+stopbits are   : 1
+escape is      : C-a
+local echo is  : no
+noinit is      : no
+noreset is     : no
+nolock is      : no
+send_cmd is    : sz -vv
+receive_cmd is : rz -vv -E
+imap is        : 
+omap is        : 
+emap is        : crcrlf,delbs,
+
+Type [C-a] [C-h] to see available commands
+
+Terminal ready
+
+>>> 
+Hello Micropython!
+Hello Micropython!
+Hello Micropython!
+Hello Micropython!
+Hello Micropython!
+Hello Micropython!
+Hello Micropython!
+Hello Micropython!
+Hello Micropython!
+Traceback (most recent call last):
+  File "main.py", line 2, in <module>
+KeyboardInterrupt: 
+MicroPython v1.19.1 on 2022-06-18; Raspberry Pi Pico with RP2040
+Type "help()" for more information.
+>>> 
+```
+Quit picocom with `C-a-q`(Ctrl+a+q)
+
 ## Resources
 1. [Documentation](https://www.raspberrypi.com/documentation/microcontrollers/micropython.html)
 2. [Raspberry Pi Pico Python SDK](https://datasheets.raspberrypi.com/pico/raspberry-pi-pico-python-sdk.pdf)
+3. [Ampy](https://pypi.org/project/adafruit-ampy/)
+
+## License
+[![license](https://img.shields.io/github/license/mashape/apistatus.svg?style=for-the-badge)](LICENSE)
+
+Copyright 2022 Daniel Chege Nduati
