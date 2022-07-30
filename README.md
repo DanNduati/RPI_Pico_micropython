@@ -1,7 +1,7 @@
 <h1 align="center"> RPI Pico Playground </h1>
 
 Messing around with the RPI pico.
-
+[![asciicast](https://asciinema.org/a/leMMPhqLBcWTbaajszcaMxutw.svg)](https://asciinema.org/a/leMMPhqLBcWTbaajszcaMxutw)
 ## <b> Installing Micropython on the Pi Pico </b>
 ### Drag and Drop Micropython
 1. Download the Micropython UF2 file for the board [here](https://micropython.org/download/rp2-pico/rp2-pico-latest.uf2)
