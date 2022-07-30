@@ -1,6 +1,10 @@
 <h1 align="center"> RPI Pico Playground </h1>
 
 Messing around with the RPI pico.
+<p align="center">
+  <img src="./images/pico.jpg"></img>
+</p>
+
 [![asciicast](https://asciinema.org/a/leMMPhqLBcWTbaajszcaMxutw.svg)](https://asciinema.org/a/leMMPhqLBcWTbaajszcaMxutw)
 ## <b> Installing Micropython on the Pi Pico </b>
 ### Drag and Drop Micropython
@@ -128,6 +132,10 @@ Quit picocom with `C-a-q`(Ctrl+a+q)
 1. [Documentation](https://www.raspberrypi.com/documentation/microcontrollers/micropython.html)
 2. [Raspberry Pi Pico Python SDK](https://datasheets.raspberrypi.com/pico/raspberry-pi-pico-python-sdk.pdf)
 3. [Ampy](https://pypi.org/project/adafruit-ampy/)
+
+## Credits
+1. [Africa open hardware community](https://twitter.com/OpenHWCommunity)
+2. Raspberry pi foundation for the free Pico :)
 
 ## License
 [![license](https://img.shields.io/github/license/mashape/apistatus.svg?style=for-the-badge)](LICENSE)
