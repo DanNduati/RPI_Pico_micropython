@@ -49,6 +49,18 @@ $ ampy --port /dev/ttyACM0 rm main.py
 ```bash
 $ ampy --port /dev/ttyACM0 run main.py
 ```
+### Configuration
+For convenience you can set `AMPY_PORT` and `AMPY_BAUD` environment variables which will be used f the port parameter is not specified.
+To set these variables automatically each time you run `ampy`, copy them into a file named `.ampy`:
+```.ampy
+AMPY_PORT=/dev/ttyACM0
+AMPY_BAUD=115200
+```
+Put this `.ampy` file to your project's directory and you can now run `ampy` within this directory without having to specify this parameters
+
+```bash
+$ ampy run main.py
+```
 
 ## Resources
 1. [Documentation](https://www.raspberrypi.com/documentation/microcontrollers/micropython.html)
