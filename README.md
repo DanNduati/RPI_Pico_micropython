@@ -25,7 +25,30 @@ Open the serial port as:
 $ picocom /dev/ttyACM0
 ```
 
+## <b>Ampy</b>
+ Utility to interact with a CircuitPython or MicroPython board over a serial connection.
 
+### Installation
+```bash
+$ pip install adafruit-ampy
+```
+### Usage
+1. List the files on the board
+```bash
+$ ampy --port /dev/ttyACM0 ls
+```
+2. Put a file on the board
+```bash
+$ ampy --port /dev/ttyACM0 put main.py
+```
+3. Remove a file from the board.
+```bash
+$ ampy --port /dev/ttyACM0 rm main.py
+```
+4. Run a script on the board
+```bash
+$ ampy --port /dev/ttyACM0 run main.py
+```
 
 ## Resources
 1. [Documentation](https://www.raspberrypi.com/documentation/microcontrollers/micropython.html)
